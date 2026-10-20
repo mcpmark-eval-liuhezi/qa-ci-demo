@@ -1,0 +1,10 @@
+name: demo-fail
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: report
+        run: echo "BUILD-CORRELATION-ID QA-CI-8F3K2"
+      - name: fail
+        run: exit 3
